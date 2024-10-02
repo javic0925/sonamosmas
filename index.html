@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/styles/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if the device is not mobile
+            if (!/Mobi|Android/i.test(navigator.userAgent)) {
+                window.location.href = "https://example.com";  // Replace with the desktop site URL
+            }
+        });
+    </script>
     <title>Sonamos Más</title>
 </head>
 <body>
