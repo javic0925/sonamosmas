@@ -209,7 +209,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 80vw;
   height: 20vh;
   display: flex;
-  justify-content: center;
+  justify-content: centers;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
@@ -223,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: left;
   a{
-    width: 100%;
+    width: auto;
     height: 100%;
     img{
     height: 100%;
@@ -236,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: right;
   a{
-    width: 100%;
+    width: auto;
     height: 100%;
     img{height: 100%;
       width: auto;}
@@ -245,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #player{width: 60%;
-  height: 30%;
+  height: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
