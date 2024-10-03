@@ -31,6 +31,10 @@
     <title>Sonamos Más</title>
 </head>
 <body>
+    <div id="splashScreen">
+        <h1>Welcome to Sonamos Más</h1>
+        <!-- Add a loading spinner or logo here -->
+    </div>
     <section class="welcomeMsg">
         <h4>¡Hola,<br>Buenas Tardes!</h4>
     </section>
@@ -89,6 +93,20 @@
     </div>
 </div>
     </section>
+    <script>
+        window.addEventListener('load', function() {
+    setTimeout(function() {
+        // Add the fade-out class to start the animation
+        document.getElementById('splashScreen').classList.add('fade-out');
+
+        // Hide the splash screen after the animation completes (1 second in this case)
+        setTimeout(function() {
+            document.getElementById('splashScreen').style.display = 'none';
+        }, 500); // Match the duration of the fade-out transition
+    }, 2500); // Keep the splash screen for 5 seconds before animating out
+});
+     </script>
+     
     <script src="/updateRadioInfo.js"></script>
     <script src="/updateKofiLink.js"></script>
     <script src="/audioControl.js"></script>
