@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // First radio stream (Impac Records Radio)
     document.querySelector('.radioBanner').addEventListener('click', function() {
         playStream('https://c7.radioboss.fm/stream/128', 'botonstop');
-        setMediaSession('Impac Records Radio', 'Sonamos Mas', '/assets/imgs/IRRBANNEr.PNG');
+        setMediaSession('Impac Records Radio', 'Sonamos Mas', '/assets/imgs/IRRBANNER.PNG');
     });
 
     // Second radio stream (La Boom Radio)
