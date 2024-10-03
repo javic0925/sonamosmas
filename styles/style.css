@@ -103,7 +103,6 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
   right: 1rem;
   top: 1rem;
-  font-weight: 700;
 }
 
 .containerInfo, .containerInfo2 {
@@ -240,4 +239,39 @@ h1, h2, h3, h4, h5, h6 {
 #player img {
   height: 100%;
   width: auto;
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modalContent {
+  background-color: #1C1D21;
+  width: 100%;
+  height: 100%;
+}
+
+.modalHeader {
+  position: relative;
+  height: 7%;
+  padding: 0.5rem;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeBtn {
+  font-size: 2.5rem;
+  color: #ffffff;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

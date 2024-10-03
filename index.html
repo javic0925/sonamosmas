@@ -12,6 +12,7 @@
             }
         });
     </script>
+    <link rel="manifest" href="/manifest.json">
     <title>Sonamos Más</title>
 </head>
 <body>
@@ -64,9 +65,18 @@
      
 
         <div id="share"><a href="#"><img src="/assets/icons/Share.png" alt=""></a></div>
+
+       <!-- Modal for chat -->
+<div id="chatModal" class="modal">
+    <div class="modalContent">
+        <span class="closeBtn">&times;</span>
+        <!-- The iframe for chat will be dynamically inserted here by JavaScript -->
+    </div>
+</div>
     </section>
     <script src="/updateRadioInfo.js"></script>
     <script src="/updateKofiLink.js"></script>
     <script src="/audioControl.js"></script>
+    <script src="/modalChat.js"></script>
 </body>
 </html>
