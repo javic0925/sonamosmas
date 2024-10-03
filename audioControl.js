@@ -5,13 +5,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to show the loading animation
     function showLoading() {
-        document.getElementById('player').innerHTML = `<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGltOGwzaXlpZHVzdDZ0ZHRiZWt6aGh0YjNiYzU3bGV2bDJxbThucCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wvtt4mtViPOSrLYNFh/giphy.gif" alt="Loading" />`; // Replace with your loading gif
+        document.getElementById('player').innerHTML = `<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGltOGwzaXlpZHVzdDZ0ZHRiZWt6aGh0YjNiYzU3bGV2bDJxbThucCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wvtt4mtViPOSrLYNFh/giphy.gif" alt="Loading" />`; 
+    }
+
+    // Function to set media session metadata
+    function setMediaSession(streamTitle, albumTitle, artworkUrl) {
+        if ('mediaSession' in navigator) {
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title: streamTitle,
+                artist: albumTitle,
+                artwork: [{ src: artworkUrl, sizes: '512x512', type: 'image/png' }]
+            });
+        }
     }
 
     // Function to play the stream
     function playStream(streamUrl, stopButtonClass) {
         showLoading(); // Show loading animation
-        // Stop the current stream if any
         if (currentAudio) {
             currentAudio.pause();
             currentAudio.src = '';  
@@ -22,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
         currentAudio = new Audio(streamUrl);
         currentAudio.play().then(() => {
             isPlaying = true;
-            // Once stream starts, show the stop button
             document.getElementById('player').innerHTML = `<img src="/assets/icons/${stopButtonClass}.png" alt="Stop Button">`;
         }).catch(error => {
             console.log("Autoplay blocked by browser, user interaction needed.");
@@ -36,19 +45,20 @@ document.addEventListener('DOMContentLoaded', function() {
             currentAudio = null;    
             isPlaying = false;
 
-            // Reset the play button
             document.getElementById('player').innerHTML = `<img src="/assets/icons/playnegroblanco.png" alt="Play Button">`;
         }
     }
 
-    // Add click event for the first radio container
+    // First radio stream (Impac Records Radio)
     document.querySelector('.radioBanner').addEventListener('click', function() {
         playStream('https://c7.radioboss.fm/stream/128', 'botonstop');
+        setMediaSession('Impac Records Radio', 'Sonamos Mas', '/assets/imgs/IRRBANNEr.PNG');
     });
 
-    // Add click event for the second radio container
+    // Second radio stream (La Boom Radio)
     document.querySelector('.radioBanner2').addEventListener('click', function() {
         playStream('https://c20.radioboss.fm:8354/stream', 'botonstop2');
+        setMediaSession('La Boom Radio', 'Sonamos Mas', '/assets/imgs/LBRBANNER.png');
     });
 
     // Play button event listener to toggle between play and stop
