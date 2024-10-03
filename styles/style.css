@@ -200,11 +200,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-#middle {
-  width: 60%;
-  height: 30%;
-}
-
 #treeLink {
   width: 20%;
   height: 20%;
@@ -236,8 +231,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #player {
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
