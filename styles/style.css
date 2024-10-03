@@ -194,10 +194,15 @@ h1, h2, h3, h4, h5, h6 {
   width: 80vw;
   height: 20vh;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
-  justify-content: center;
+  flex-wrap: nowrap;
   align-items: center;
-  overflow: hidden;
+}
+
+#middle {
+  width: 60%;
+  height: 30%;
 }
 
 #treeLink {
@@ -206,30 +211,38 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: left;
 }
-#treeLink img {
+#treeLink a {
+  width: 100%;
   height: 100%;
-  width: auto;
 }
-
-#player {
-  width: 60%;
-  height: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#player img {
+#treeLink a img {
   height: 100%;
   width: auto;
 }
 
 #share {
-  width: 20%;
+  width: 2rem;
   height: 20%;
   display: flex;
   justify-content: right;
 }
-#share img {
+#share a {
+  width: 100%;
+  height: 100%;
+}
+#share a img {
+  height: 100%;
+  width: auto;
+}
+
+#player {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#player img {
   height: 100%;
   width: auto;
 }/*# sourceMappingURL=style.css.map */

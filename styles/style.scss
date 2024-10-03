@@ -209,11 +209,16 @@ h1, h2, h3, h4, h5, h6 {
   width: 80vw;
   height: 20vh;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
   align-items: center;
-  overflow: hidden;
+  
+}
+
+#middle{
+  width: 60%;
+  height: 30%;
 }
 
 #treeLink{
@@ -221,25 +226,35 @@ h1, h2, h3, h4, h5, h6 {
   height: 20%;
   display: flex;
   justify-content: left;
-  img{height: 100%;
-  width: auto;}
-}
-
-#player{width: 60%;
-height: 30%;
-display: flex;
-justify-content: center;
-align-items: center;
-img{
-  height: 100%;
-  width: auto;}
+  a{
+    width: 100%;
+    height: 100%;
+    img{
+    height: 100%;
+   width: auto;}}
 }
 
 #share{
-  width: 20%;
+  width: 2rem;
   height: 20%;
   display: flex;
   justify-content: right;
-  img{height: 100%;
-    width: auto;}
+  a{
+    width: 100%;
+    height: 100%;
+    img{height: 100%;
+      width: auto;}
+  }
+  
 }
+
+#player{width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  img{
+    height: 100%;
+    width: auto;}
+  }
