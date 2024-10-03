@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.netlify.sonamosmas.twa",
+        "sha256_cert_fingerprints": ["D5:84:9B:45:FD:16:5B:11:6E:93:1C:5B:FC:32:7A:04:D8:59:64:DB:E7:0C:20:25:97:AC:68:EB:CD:36:BA:A6"]
+      }
+    }]
