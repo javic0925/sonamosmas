@@ -1,0 +1,16 @@
+{
+    "greetings": [
+      {
+        "timeOfDay": "morning",
+        "message": "Que suene la musica!"
+      },
+      {
+        "timeOfDay": "afternoon",
+        "message": "Juntos Sonamos Mas!"
+      },
+      {
+        "timeOfDay": "evening",
+        "message": "Eres lo mejor!"
+      }
+    ]
+  }

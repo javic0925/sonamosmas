@@ -31,7 +31,7 @@ function updateKofiURL() {
                     } else {
                         // Hide the Ko-Fi button and reset background if no match
                         document.querySelector('#irrKofiURL').style.display = 'none';
-                        document.querySelector('.radioBanner').style.backgroundImage = 'url(/assets/imgs/bannerirpng.png)'; // Reset background
+                        document.querySelector('.radioBanner').style.backgroundImage = 'url(/assets/imgs/irrflatbanner.jpg)'; // Reset background
                     }
                 })
                 .catch(error => console.error('Error fetching now playing info for radioContainer1:', error));
@@ -54,7 +54,7 @@ function updateKofiURL() {
                     } else {
                         // Hide the Ko-Fi button and reset background if no match
                         document.querySelector('#lbrKofiURL').style.display = 'none';
-                        document.querySelector('.radioBanner2').style.backgroundImage = 'url(/assets/imgs/bannerirpng.png)'; // Reset background
+                        document.querySelector('.radioBanner2').style.backgroundImage = 'url(/assets/imgs/lbrflatbanner.jpg)'; // Reset background
                     }
                 })
                 .catch(error => console.error('Error fetching now playing info for radioContainer2:', error));
