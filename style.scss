@@ -1,0 +1,256 @@
+// Variables
+$primary-color: #1e1e1e;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$background-color: #ffffff;
+$font-family: 'Arial', sans-serif;
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
+// Reset basic styling
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'CubanoRegular';
+  src: url('/assets/fonts/cubanoregular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: $base-font-size;
+  size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: $font-family;
+  color: $text-color;
+  background-color: $background-color;
+  line-height: $base-line-height;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'CubanoRegular', sans-serif;
+}
+
+// Global Styles
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: $primary-color;
+}
+// Layout
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+// Buttons
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.welcomeMsg{
+  width: 80vw;
+  height: 10vh;
+  color: #1C1D21;
+}
+
+.mainRadioCont{
+  width: 80vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.radioContainer, .radioContainer2{
+  width: 100%;
+  height: 45%;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+ 
+}
+
+.radioBanner, .radioBanner2{
+  width: 100%;
+  height: 75%;
+  background-image: url(/assets/imgs/bannerirpng.png);
+  background-size: cover;
+}
+
+.listenerCounter, .listenerCounter2{
+  width: 5rem;
+  height: 1.6rem;
+  color: white;
+  position: absolute;
+  text-align: right;
+  right: 1rem;
+  top: 1rem;
+  
+}
+
+.containerInfo, .containerInfo2{
+  width: 100%;
+  height: 25%;
+  background-color: #1C1D21;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.kofiCont, .kofiCont2 {
+  height: 100%;
+  width: 15%;
+}
+
+
+.nowPlayingInfo, .nowPlayingInfo2{
+  height: 100%;
+  width: 70%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  p{
+    height: auto;
+  }
+}
+
+.chatCont, .chatCont2{
+  height: 100%;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#irrKofiURL{
+  height:100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    height: 2rem;
+    width: auto;}
+}
+
+#irrChatURL{
+  height:100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    height: 2rem;
+    width: auto;
+    
+  }
+}
+
+#lbrKofiURL{
+  height:100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    height: 2rem;
+    width: auto;}
+}
+
+#lbrChatURL{
+  height:100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    height: 2rem;
+    width: auto;
+    
+  }
+}
+
+.bottomMain{
+  width: 80vw;
+  height: 20vh;
+  display: flex;
+  justify-content: centers;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  
+}
+
+
+#treeLink{
+  width: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: left;
+  a{
+    width: auto;
+    height: 100%;
+    img{
+    height: 100%;
+   width: auto;}}
+}
+
+#share{
+  width: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: right;
+  a{
+    width: auto;
+    height: 100%;
+    img{height: 100%;
+      width: auto;}
+  }
+  
+}
+
+#player{width: 60%;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  img{
+    height: 100%;
+    width: auto;}
+  }
