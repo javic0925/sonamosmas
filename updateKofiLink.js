@@ -28,6 +28,13 @@ function updateKofiURL() {
                         document.querySelector('#irrKofiURL').setAttribute('href', validDJ.kofiURL);
                         document.querySelector('#irrKofiURL').style.display = 'flex'; // Show the Ko-Fi button
                         document.querySelector('.radioBanner').style.backgroundImage = `url(${validDJ.irrFlat})`; // Use image from validDJs JSON
+
+                        // Add event listener to open Ko-Fi link in a new tab
+                        document.querySelector('#irrKofiURL').addEventListener('click', function(event) {
+                            event.preventDefault(); // Prevent default anchor behavior
+                            window.open(validDJ.kofiURL, '_blank'); // Open the Ko-Fi link in a new tab
+                        });
+
                     } else {
                         // Hide the Ko-Fi button and reset background if no match
                         document.querySelector('#irrKofiURL').style.display = 'none';
@@ -51,6 +58,13 @@ function updateKofiURL() {
                         document.querySelector('#lbrKofiURL').setAttribute('href', validDJ.kofiURL);
                         document.querySelector('#lbrKofiURL').style.display = 'flex'; // Show the Ko-Fi button
                         document.querySelector('.radioBanner2').style.backgroundImage = `url(${validDJ.lbrFlat})`; // Use image from validDJs JSON
+
+                        // Add event listener to open Ko-Fi link in a new tab
+                        document.querySelector('#lbrKofiURL').addEventListener('click', function(event) {
+                            event.preventDefault(); // Prevent default anchor behavior
+                            window.open(validDJ.kofiURL, '_blank'); // Open the Ko-Fi link in a new tab
+                        });
+
                     } else {
                         // Hide the Ko-Fi button and reset background if no match
                         document.querySelector('#lbrKofiURL').style.display = 'none';

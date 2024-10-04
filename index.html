@@ -32,7 +32,7 @@
 </head>
 <body>
     <div id="splashScreen">
-        <h1>Welcome to Sonamos Más</h1>
+        <h3>¡Juntos Sonamos Más!</h3>
         <!-- Add a loading spinner or logo here -->
     </div>
     <section class="welcomeMsg">
@@ -42,45 +42,58 @@
     <!-- Main radio container with two radioContainers inside -->
     <section class="mainRadioCont">
         <!-- First radio container -->
-        <div class="radioContainer">
-            <div class="radioBanner">
-                <div class="listenerCounter">100</div>
-            </div>
-            <div class="containerInfo">
-                <div class="kofiCont">
-                    <a href="#" id="irrKofiURL"><img src="/assets/icons/Kofi.png" alt="Kofi Logo"></a>
-                </div>
-                <div class="nowPlayingInfo"><p>
-                    Chamba DJ | En vivo
-                </p></div>
-                <div class="chatCont">
-                    <a href="#" id="irrChatURL"><img src="/assets/icons/icons8-chat-100.png" alt="Chat Logo"></a>
-                </div>
-            </div>
+        <!-- First radio container -->
+<div class="radioContainer">
+    <div class="radioBanner">
+        <div class="listenerCounter">
+            <img src="/assets/icons/icons8-human-100.png" alt="Listener Icon">
+            <span>100</span> <!-- This is where the number will be updated -->
         </div>
+    </div>
+    <div class="containerInfo">
+        <div class="kofiCont">
+            <a href="#" id="irrKofiURL"><img src="/assets/icons/Kofi.png" alt="Kofi Logo"></a>
+        </div>
+        <div class="nowPlayingInfo"><p>Chamba DJ | En vivo</p></div>
+        <div class="chatCont">
+            <a href="#" id="irrChatURL"><img src="/assets/icons/icons8-chat-100.png" alt="Chat Logo"></a>
+        </div>
+    </div>
+</div>
 
-        <!-- Second radio container -->
-        <div class="radioContainer2">
-            <div class="radioBanner2">
-                <div class="listenerCounter2">50</div>
-            </div>
-            <div class="containerInfo2">
-                <div class="kofiCont2">
-                    <a href="#" id="lbrKofiURL"><img src="/assets/icons/Kofi.png" alt="Kofi Logo"></a>
-                </div>
-                <div class="nowPlayingInfo2"><p>DJ Fiesta | Mix Especial</p></div>
-                <div class="chatCont2">
-                    <a href="#" id="lbrChatURL"><img src="/assets/icons/icons8-chat-100.png" alt="Chat Logo"></a>
-                </div>
-            </div>
+<!-- Second radio container -->
+<div class="radioContainer2">
+    <div class="radioBanner2">
+        <div class="listenerCounter2">
+            <img src="/assets/icons/icons8-human-100.png" alt="Listener Icon">
+            <span>50</span> <!-- This is where the number will be updated -->
         </div>
+    </div>
+    <div class="containerInfo2">
+        <div class="kofiCont2">
+            <a href="#" id="lbrKofiURL"><img src="/assets/icons/Kofi.png" alt="Kofi Logo"></a>
+        </div>
+        <div class="nowPlayingInfo2"><p>DJ Fiesta | Mix Especial</p></div>
+        <div class="chatCont2">
+            <a href="#" id="lbrChatURL"><img src="/assets/icons/icons8-chat-100.png" alt="Chat Logo"></a>
+        </div>
+    </div>
+</div>
     </section>
 
     <section class="bottomMain">
         <div id="treeLink"><a href="https://linktr.ee/sonamosmas" target="_blank"><img src="/assets/icons/link.png" alt=""></a></div>
 
         
-        <div id="player"><img src="/assets/icons/playnegroblanco.png" alt=""></div>
+      
+<div id="player">
+    <img id="playerImage" src="/assets/icons/playnegroblanco.png" alt="Play Button">
+    <!-- Stop buttons initially hidden -->
+    <img id="botonstop" src="/assets/icons/botonstop.png" alt="Stop C7" style="display:none;">
+    <img id="botonstop2" src="/assets/icons/botonstop2.png" alt="Stop C20" style="display:none;">
+</div>
+
+
      
 
         <div id="share"><a href="#"><img src="/assets/icons/Share.png" alt=""></a></div>
@@ -109,6 +122,7 @@
      
     <script src="/updateRadioInfo.js"></script>
     <script src="/updateKofiLink.js"></script>
+    <!--<script src="/playStream.js"></script>-->
     <script src="/audioControl.js"></script>
     <script src="/modalChat.js"></script>
     <script src="/greetings.js"></script>
