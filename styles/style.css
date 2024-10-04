@@ -244,17 +244,17 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
 }
 
-#share {
+#shareButton {
   width: 20%;
   height: 20%;
   display: flex;
   justify-content: right;
 }
-#share a {
+#shareButton a {
   width: auto;
   height: 100%;
 }
-#share a img {
+#shareButton a img {
   height: 100%;
   width: auto;
 }
