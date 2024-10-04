@@ -20,6 +20,27 @@ function showLoading() {
     if (botonStop2) botonStop2.style.display = 'none';
 }
 
+// Function to set media session metadata
+function setMediaSession(streamTitle, albumTitle, artworkUrl) {
+    if ('mediaSession' in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+            title: streamTitle,
+            artist: albumTitle,
+            artwork: [
+                { src: artworkUrl, sizes: '512x512', type: 'image/png' }
+            ]
+        });
+
+        // Optionally, you can also handle media actions like play/pause
+        navigator.mediaSession.setActionHandler('play', function() { 
+            currentAudio.play(); 
+        });
+        navigator.mediaSession.setActionHandler('pause', function() { 
+            currentAudio.pause(); 
+        });
+    }
+}
+
 // Function to show the appropriate stop button and hide loading gif
 function showStopButton(stopButtonId) {
     if (playerImage) playerImage.style.display = 'none'; // Hide the play/loading button once stream starts
@@ -62,6 +83,13 @@ function playStream(streamUrl, stopButtonId) {
     currentAudio.play().then(() => {
         isPlaying = true;
         showStopButton(stopButtonId); // Show the appropriate stop button once stream plays
+
+        // Set the media session metadata depending on the stream
+        if (streamUrl === 'https://c7.radioboss.fm/stream/128') {
+            setMediaSession('Impac Records Radio', 'Sonamos Más', '/assets/imgs/IRRBANNER.png');
+        } else if (streamUrl === 'https://c20.radioboss.fm:8354/stream') {
+            setMediaSession('La Boom Radio', 'Sonamos Más', '/assets/imgs/LBRBANNER.png');
+        }
     }).catch(() => {
         showPlayButton(); // If stream fails, reset to play button
     });
