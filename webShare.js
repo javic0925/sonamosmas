@@ -9,7 +9,7 @@ document.getElementById('shareButton').addEventListener('click', function(event)
         navigator.share({
             title: 'Sonamos Más',
             text: 'Check out Sonamos Más, your go-to app for exclusive content from Impac Records and La Boom!',
-            url: window.location.href // Share the current page URL
+            url: 'https://sonamosmas.com' // Share the current page URL
         })
         .then(() => console.log('Sharing successful!'))
         .catch((error) => console.error('Error sharing:', error));
