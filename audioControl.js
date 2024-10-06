@@ -1,6 +1,7 @@
 // Global variables
 let currentAudio = null; // Store the current audio object to control playback
 let currentStream = null; // Track the current stream URL being played
+let lastStream = null; // Track the last stream URL that was played
 let isPlaying = false; // Track if audio is playing
 
 // Get the necessary elements
@@ -69,6 +70,8 @@ function stopAllStreams() {
         currentAudio.pause();
         currentAudio.src = ''; // Clear the audio source
         isPlaying = false;
+        lastStream = currentStream; // Store the last stream URL before stopping
+        currentStream = null; // Reset the current stream
         showPlayButton(); // Show the play button after stopping
     }
 }
@@ -138,5 +141,14 @@ window.addEventListener('DOMContentLoaded', function() {
         if (!isPlaying) {
             playStream('https://c7.radioboss.fm/stream/128', 'botonstop'); // Autoplay C7 stream
         }
-    }, 2000); // Autoplay after 2 seconds
+    }, 3000); // Autoplay after 2 seconds
 });
+
+// If the play button is clicked after audio ends, resume the last stream
+if (playerImage) {
+    playerImage.addEventListener('click', function() {
+        if (!isPlaying && lastStream) {
+            playStream(lastStream === 'botonstop' ? 'https://c7.radioboss.fm/stream/128' : 'https://c20.radioboss.fm:8354/stream', lastStream);
+        }
+    });
+}
