@@ -1,9 +1,10 @@
 function updateGreeting() {
     // Fetch the greetings JSON
-    fetch('https://app.sonamosmas.com/greetings.json') // Replace with your actual JSON URL
+    fetch('https://javic0925.github.io/sonamosmas/greetings.json') // Replace with your actual JSON URL
         .then(response => response.json())
         .then(data => {
             const greetings = data.greetings;
+            console.log('Fetched greetings:', data.greetings); // Log fetched greetings
 
             // Get the current hour to determine time of day
             const currentHour = new Date().getHours();
@@ -22,8 +23,10 @@ function updateGreeting() {
 
             // Update the welcome message
             const welcomeMsg = document.querySelector('.welcomeMsg h4');
-            const existingText = welcomeMsg.innerHTML.split('<br>')[0]; // Keep ¡Hola, intact
-            welcomeMsg.innerHTML = `${existingText}<br>${greetingMessage}`;
+            welcomeMsg.innerHTML = `¡Hola!<br>${greetingMessage}`;
+            
+            // Log the update to the console
+            console.log('DOM updated with new greeting:', greetingMessage);
         })
         .catch(error => {
             console.log('Error fetching greetings:', error);
@@ -33,6 +36,6 @@ function updateGreeting() {
 document.addEventListener('DOMContentLoaded', function() {
     updateGreeting(); // Initial call when the page loads
 
-    // Set the interval to run every 10 minutes (600,000 milliseconds)
+    // Set the interval to run every 10 seconds (10000 milliseconds) for development
     setInterval(updateGreeting, 600000);
 });
