@@ -1,4 +1,4 @@
-const currentVersion = '1.0.1';  // Local version
+const currentVersion = '1.0.2';  // Local version
 
 // Function to check the version and show the refresh button if needed
 function checkVersion() {
