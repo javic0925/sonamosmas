@@ -15,13 +15,109 @@ html {
   size: 62.5%;
 }
 
+@media only screen and (min-width: 0rem) {
+  :root {
+    --dark: #121212;
+    --medium: #282828;
+    --accent: #404040;
+    --bodyTextColorWhite: #fafbfc;
+  }
+  body.dark-mode {
+    background-color: var(--dark);
+  }
+  body.dark-mode p,
+  body.dark-mode li,
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode h4,
+  body.dark-mode h5,
+  body.dark-mode h6,
+  body.dark-mode .cs-title,
+  body.dark-mode .cs-text,
+  body.dark-mode .cs-li {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode .light {
+    display: none;
+  }
+  body.dark-mode .dark {
+    display: block !important;
+  }
+  .dark {
+    /* class used to hide elements that only need to be seen when dark mode is enabled */
+    display: none;
+  }
+}
+/*-- -------------------------- -->
+<---      Dark Mode Toggle      -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #dark-mode-toggle .cs-sun {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  body.dark-mode #dark-mode-toggle .cs-moon {
+    transform: translate(-50%, -150%);
+    opacity: 0;
+  }
+  #dark-mode-toggle {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    transform: translateY(-50%);
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: none;
+    overflow: hidden;
+    padding: 0;
+  }
+  #dark-mode-toggle img,
+  #dark-mode-toggle svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.5625rem;
+    height: 1.5625rem;
+    pointer-events: none;
+  }
+  #dark-mode-toggle .cs-moon {
+    z-index: 2;
+    transition: transform 0.3s, opacity 0.3s, fill 0.3s;
+    fill: #000;
+  }
+  #dark-mode-toggle .cs-sun {
+    z-index: 1;
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 64rem) {
+  #dark-mode-toggle {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin-left: 1.875rem;
+    margin-bottom: 0rem;
+  }
+  #dark-mode-toggle .cs-moon {
+    fill: #2ecc71;
+  }
+}
 #splashScreen {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: white;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -30,6 +126,10 @@ html {
   z-index: 9999;
   transition: opacity 0.5s ease-out; /* Fade-out transition */
   opacity: 1; /* Start fully visible */
+}
+
+#splashText {
+  color: #1C1D21;
 }
 
 #splashScreen.fade-out {
@@ -258,6 +358,11 @@ h1, h2, h3, h4, h5, h6 {
 #treeLink a img {
   height: 100%;
   width: auto;
+  filter: none;
+}
+
+body.dark-mode #treeLink a img {
+  filter: invert(1);
 }
 
 #shareButton {
@@ -273,6 +378,11 @@ h1, h2, h3, h4, h5, h6 {
 #shareButton a img {
   height: 100%;
   width: auto;
+  filter: none;
+}
+
+body.dark-mode #shareButton a img {
+  filter: invert(1);
 }
 
 #player {
