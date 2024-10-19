@@ -1,16 +1,16 @@
 {
-    "greetings": [
-      {
-        "timeOfDay": "morning",
-        "message": "La vida es ritmo, sigue bailando!"
-      },
-      {
-        "timeOfDay": "afternoon",
-        "message": "Cree en tu música, todo es posible!"
-      },
-      {
-        "timeOfDay": "El sonido de hoy es la inspiración de mañana",
-        "message": "Eres lo mejor!"
-      }
-    ]
-  }
+  "greetings": [
+    {
+      "timeOfDay": "morning",
+      "message": "Nuevo día, nuevas oportunidades!"
+    },
+    {
+      "timeOfDay": "afternoon",
+      "message": "Recarga energía y sigue soñando!"
+    },
+    {
+      "timeOfDay": "evening",
+      "message": "La noche inspira!"
+    }
+  ]
+}
