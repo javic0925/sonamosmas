@@ -79,5 +79,5 @@ function updateKofiURL() {
 // Call the function initially
 updateKofiURL();
 
-// Set an interval to refresh the Ko-Fi URL and backgrounds every 15 seconds (15000 milliseconds)
-setInterval(updateKofiURL, 15000);
+// Set an interval to refresh the Ko-Fi URL and backgrounds every 10 seconds (15000 milliseconds)
+setInterval(updateKofiURL, 10000);

@@ -2,14 +2,14 @@
     "greetings": [
       {
         "timeOfDay": "morning",
-        "message": "Que suene la musica!"
+        "message": "La vida es ritmo, sigue bailando!"
       },
       {
         "timeOfDay": "afternoon",
-        "message": "Juntos Sonamos Mas!"
+        "message": "Cree en tu música, todo es posible!"
       },
       {
-        "timeOfDay": "evening",
+        "timeOfDay": "El sonido de hoy es la inspiración de mañana",
         "message": "Eres lo mejor!"
       }
     ]

@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
+function updateGreeting() {
     // Fetch the greetings JSON
-    fetch('https://raw.githubusercontent.com/javic0925/sonamosmas/a43c7eb70a75da52e7546add6bb0d388dad56374/greetings.json') // Replace with your actual JSON URL
+    fetch('https://app.sonamosmas.com/greetings.json') // Replace with your actual JSON URL
         .then(response => response.json())
         .then(data => {
             const greetings = data.greetings;
@@ -28,4 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.log('Error fetching greetings:', error);
         });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateGreeting(); // Initial call when the page loads
+
+    // Set the interval to run every 10 minutes (600,000 milliseconds)
+    setInterval(updateGreeting, 600000);
 });

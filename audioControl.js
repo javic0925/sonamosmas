@@ -90,7 +90,7 @@ function playStream(streamUrl, stopButtonId) {
         // Set the media session metadata depending on the stream
         if (streamUrl === 'https://c7.radioboss.fm/stream/128') {
             setMediaSession('Impac Records Radio', 'Sonamos Más', '/assets/imgs/IRRBANNER.png');
-        } else if (streamUrl === 'https://c20.radioboss.fm:8354/stream') {
+        } else if (streamUrl === 'https://c20.radioboss.fm:18354/stream') {
             setMediaSession('La Boom Radio', 'Sonamos Más', '/assets/imgs/LBRBANNER.png');
         }
     }).catch(() => {
@@ -118,7 +118,7 @@ if (radioBanner) {
 
 if (radioBanner2) {
     radioBanner2.addEventListener('click', function() {
-        playStream('https://c20.radioboss.fm:8354/stream', 'botonstop2'); // Play C20 stream and show botonstop2
+        playStream('https://c20.radioboss.fm:18354/stream', 'botonstop2'); // Play C20 stream and show botonstop2
     });
 }
 
@@ -148,7 +148,7 @@ window.addEventListener('DOMContentLoaded', function() {
 if (playerImage) {
     playerImage.addEventListener('click', function() {
         if (!isPlaying && lastStream) {
-            playStream(lastStream === 'botonstop' ? 'https://c7.radioboss.fm/stream/128' : 'https://c20.radioboss.fm:8354/stream', lastStream);
+            playStream(lastStream === 'botonstop' ? 'https://c7.radioboss.fm/stream/128' : 'https://c20.radioboss.fm:18354/stream', lastStream);
         }
     });
 }

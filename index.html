@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css?v=1.0.1">
+    <meta name="robots" content="noindex, nofollow">
     <meta name="description" content="Sonamos Más is your go-to app for exclusive content from Impac Records and La Boom. You can stay connected with your favorite shows, creators, and voices, all in one place.">
     <meta name="keywords" content="impac, records, radio, la boom, radio, sonamos, maximum-scale">
     <meta name="author" content="Sonamos Más">
@@ -33,6 +34,7 @@
 <body>
     <div id="splashScreen">
         <h3>¡Juntos Sonamos Más!</h3>
+        <img id="loader" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGltOGwzaXlpZHVzdDZ0ZHRiZWt6aGh0YjNiYzU3bGV2bDJxbThucCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wvtt4mtViPOSrLYNFh/giphy.gif" alt="loading">
         <!-- Add a loading spinner or logo here -->
     </div>
     <section class="welcomeMsg">
@@ -54,7 +56,7 @@
         <div class="kofiCont">
             <a href="#" id="irrKofiURL"><img src="/assets/icons/Kofi.png" alt="Kofi Logo"></a>
         </div>
-        <div class="nowPlayingInfo"><p>Chamba DJ | En vivo</p></div>
+        <div class="nowPlayingInfo"><p>Impac Records Radio</p></div>
         <div class="chatCont">
             <a href="#" id="irrChatURL"><img src="/assets/icons/icons8-chat-100.png" alt="Chat Logo"></a>
         </div>
@@ -73,7 +75,7 @@
         <div class="kofiCont2">
             <a href="#" id="lbrKofiURL"><img src="/assets/icons/Kofi.png" alt="Kofi Logo"></a>
         </div>
-        <div class="nowPlayingInfo2"><p>DJ Fiesta | Mix Especial</p></div>
+        <div class="nowPlayingInfo2"><p>La Boom Radio</p></div>
         <div class="chatCont2">
             <a href="#" id="lbrChatURL"><img src="/assets/icons/icons8-chat-100.png" alt="Chat Logo"></a>
         </div>
@@ -100,14 +102,11 @@
     <a href="#" id="share"><img src="/assets/icons/Share.png" alt="Share"></a>
 </div>
 
-       <!-- Modal for chat -->
-<div id="chatModal" class="modal">
-    <div class="modalContent">
-        <span class="closeBtn">&times;</span>
-        <!-- The iframe for chat will be dynamically inserted here by JavaScript -->
-    </div>
-</div>
+
     </section>
+    <button id="refreshButton" class="refresh-btn" onclick="location.reload(true);" style="display: none;">
+        Presiona aquí para actualizar a la última versión
+    </button>
     <script>
         window.addEventListener('load', function() {
     setTimeout(function() {
@@ -122,12 +121,12 @@
 });
      </script>
      
-    <script src="/updateRadioInfo.js"></script>
-    <script src="/updateKofiLink.js"></script>
-    <!--<script src="/playStream.js"></script>-->
-    <script src="/audioControl.js"></script>
-    <script src="/modalChat.js"></script>
-    <script src="/greetings.js"></script>
-    <script src="/webShare.js"></script>
+     <script src="/updateRadioInfo.js?v=1.0.0"></script>
+     <script src="/updateKofiLink.js?v=1.0.0"></script>
+     <script src="/audioControl.js?v=1.0.0"></script>
+     <script src="/modalChat.js?v=1.0.0"></script>
+     <script src="/greetings.js?v=1.0.2"></script>
+     <script src="/webShare.js?v=1.0.0"></script>
+     <script src="/versionCheck.js?v=1.0.0"></script>
 </body>
 </html>

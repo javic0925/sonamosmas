@@ -9,7 +9,7 @@ function updateRadioContainer1() {
         })
         .catch(error => {
             console.error('Error fetching radio container 1 data:', error);
-            document.querySelector('.nowPlayingInfo p').textContent = 'Error fetching data';
+            document.querySelector('.nowPlayingInfo p').textContent = 'Loading...';
             document.querySelector('.listenerCounter span').textContent = '0'; // Update only the number
         });
 }
@@ -25,7 +25,7 @@ function updateRadioContainer2() {
         })
         .catch(error => {
             console.error('Error fetching radio container 2 data:', error);
-            document.querySelector('.nowPlayingInfo2 p').textContent = 'Error fetching data';
+            document.querySelector('.nowPlayingInfo2 p').textContent = 'Loading...';
             document.querySelector('.listenerCounter2 span').textContent = '0'; // Update only the number
         });
 }
