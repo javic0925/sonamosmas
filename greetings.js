@@ -23,7 +23,7 @@ function updateGreeting() {
 
             // Update the welcome message
             const welcomeMsg = document.querySelector('.welcomeMsg h4');
-            welcomeMsg.innerHTML = `¡Hola!<br>${greetingMessage}`;
+            welcomeMsg.innerHTML = `¡Hola,<br>${greetingMessage}`;
             
             // Log the update to the console
             console.log('DOM updated with new greeting:', greetingMessage);
