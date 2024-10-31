@@ -2,15 +2,15 @@
   "greetings": [
     {
       "timeOfDay": "morning",
-      "message": "Feliz cumpleaños DJ Ale GT!"
+      "message": "Disfruta la música al máximo!"
     },
     {
       "timeOfDay": "afternoon",
-      "message": "Feliz cumpleaños DJ Ale GT!"
+      "message": "Disfruta la música al máximo!"
     },
     {
       "timeOfDay": "evening",
-      "message": "Feliz cumpleaños DJ Ale GT!"
+      "message": "Disfruta la música al máximo!"
     }
   ]
 }
