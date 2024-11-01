@@ -2,15 +2,15 @@
   "greetings": [
     {
       "timeOfDay": "morning",
-      "message": "Disfruta la música al máximo!"
+      "message": "Feliz día del locutor!"
     },
     {
       "timeOfDay": "afternoon",
-      "message": "Disfruta la música al máximo!"
+      "message": "Feliz día del locutor!"
     },
     {
       "timeOfDay": "evening",
-      "message": "Disfruta la música al máximo!"
+      "message": "Feliz día del locutor!"
     }
   ]
 }
