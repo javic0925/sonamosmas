@@ -2,15 +2,15 @@
   "greetings": [
     {
       "timeOfDay": "morning",
-      "message": "Feliz día del locutor!"
+      "message": "Feliz Fin de Semana!"
     },
     {
       "timeOfDay": "afternoon",
-      "message": "Feliz día del locutor!"
+      "message": "Feliz Fin de Semana!"
     },
     {
       "timeOfDay": "evening",
-      "message": "Feliz día del locutor!"
+      "message": "Feliz Fin de Semana!"
     }
   ]
 }
