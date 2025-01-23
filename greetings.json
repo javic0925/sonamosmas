@@ -2,15 +2,15 @@
   "greetings": [
     {
       "timeOfDay": "morning",
-      "message": "Felices fiestas! 🎆"
+      "message": "La música nos une!"
     },
     {
       "timeOfDay": "afternoon",
-      "message": "Felices fiestas! 🎆"
+      "message": "La música nos une!"
     },
     {
       "timeOfDay": "evening",
-      "message": "Felices fiestas! 🎆"
+      "message": "La música nos une!"
     }
   ]
 }
